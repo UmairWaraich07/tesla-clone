@@ -1,9 +1,9 @@
 # Tesla app clone 
-👉 This is a tesla clone app.
+👉 This is a Tesla clone app.
 
-Built with :
-➡️ React Js\
-➡️ Styled components\
-➡️ Redux toolkit
+Built with :\
+    ➡️ React Js\
+    ➡️ Styled components\
+    ➡️ Redux toolkit
 
 
