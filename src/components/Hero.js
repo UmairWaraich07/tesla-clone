@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
@@ -10,7 +11,12 @@ const Hero = () => {
         loop
         src="/Homepage-Test_Drive-NA-Desktop.webm"
       ></HeroVideo>
-      <ItemText>
+      <ItemText
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
+      >
         <h2>Experience Tesla</h2>
         <p>Schedule a Demo Drive Today</p>
       </ItemText>

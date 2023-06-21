@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { motion } from "framer-motion";
 
 const Model = ({
   title,
@@ -23,7 +24,13 @@ const Model = ({
           <p>{description}</p>
         </ItemText>
 
-        <ModelWrapper>
+        <ModelWrapper
+          as={motion.div}
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <ModelInformation>
             {range && (
               <ModelStat>
@@ -75,7 +82,6 @@ const Wrap = styled.div`
   position: relative;
   height: 140dvh;
   width: 100%;
-  scroll-snap-align: center;
 
   background-image: ${(props) => `url('/${props.deskImg}')`};
 
@@ -193,8 +199,6 @@ const LeftButton = styled.button`
   }
 `;
 const RightButton = styled(LeftButton)`
-  /* background-color: ${(props) =>
-    props.opacity ? "rgba(23, 26, 32, 1)" : "rgba(23, 26, 32, .65)"}; */
   background-color: transparent;
   border: 3px solid white;
   color: #fff;

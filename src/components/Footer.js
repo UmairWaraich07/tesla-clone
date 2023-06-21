@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Footer = () => {
+const Footer = ({ home }) => {
   return (
     <FooterWrapper role="list">
       <FooterList>
@@ -20,7 +20,7 @@ const Footer = () => {
 const FooterWrapper = styled.footer`
   padding: 30px;
   padding-top: 50px;
-  scroll-snap-align: center;
+  scroll-snap-align: ${(props) => (props.home ? "start" : "none")};
 `;
 const FooterList = styled.div`
   display: flex;

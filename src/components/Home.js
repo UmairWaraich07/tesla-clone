@@ -118,7 +118,7 @@ function Home() {
           />
         </section>
 
-        <Footer />
+        <Footer home={true} />
       </Container>
     </>
   );
