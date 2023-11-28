@@ -26,10 +26,7 @@ const Navbar = ({ black, isFixed }) => {
         </MenuWrapper>
         <MenuWrapper black={black}>
           <li>
-            <a href="#">Shop</a>
-          </li>
-          <li>
-            <a href="#">Account</a>
+            <a href="/">Shop</a>
           </li>
           <li>
             <a href="#" onClick={() => handleSideMenu(true)}>
